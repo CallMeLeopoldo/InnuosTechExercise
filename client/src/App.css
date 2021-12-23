@@ -11,12 +11,11 @@
   padding-bottom: 1em;
   padding-left: 2%;
   justify-items: center;
-  grid-template-columns: repeat(4, [col-start] 15% [end]);
+  grid-template-columns: repeat(5, 0.5fr);
   grid-template-rows: repeat(auto-fill);
   grid-row-gap: 10em;
-  grid-column-gap: 10em;
+  grid-column-gap: 2em;
   background-color: #292828;
-  overflow: hidden;
 
 }
 
@@ -152,15 +151,15 @@
     padding-bottom: 1em;
     padding-left: 0%;
     justify-items: center;
-    grid-template-columns: repeat(3, [col-start] 25% [end]);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fill);
-    grid-row-gap: 5em;
-    grid-column-gap: 5em;
+    grid-row-gap: 4em;
+    grid-column-gap: 4em;
     background-color: #292828;
   }
 
   .cover{
-    width: 130px;
+    width: 200px;
   }
   
   .source{
@@ -171,28 +170,70 @@
   }
 
   .artistInfo{
-    width: 130px;
+    width: 200px;
     padding-top: .5em;
     font-size: 15px;
     color: white;
   }
   
   .albumInfo{
-    width: 130px;
+    width: 200px;
     font-size: 13px;
     color: lightgrey;
   }  
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1042px) {
   .container{
     display: grid;
     padding-top: 1em;
     padding-left: 0%;
     padding-bottom: 1em;
     justify-items: center;
-    grid-template-columns: repeat(2, [col-start] 50% [end]);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill);
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    background-color: #292828;
+  }
+
+  .cover{
+    width: 200px;
+    
+  }
+
+  .source{
+    position: absolute;
+    width: 20px;
+    left: -6px;
+    top: -67px;
+  }
+
+  .artistInfo{
+    width: 200px;
+    padding-top: .5em;
+    font-size: 15px;
+    color: white;
+  }
+  
+  .albumInfo{
+    width: 200px;
+    font-size: 13px;
+    color: lightgrey;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  .container{
+    overflow: hidden;
+    display: grid;
+    padding-top: 1em;
+    padding-left: 0%;
+    padding-bottom: 1em;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto-fill);
     grid-row-gap: 1em;
     grid-column-gap: 1em;
@@ -226,15 +267,126 @@
   
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
   .container{
+    overflow: hidden;
     width: 100%;
     display: grid;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 0%;
     justify-items: center;
-    grid-template-columns: repeat(1, [col-start] 100% [end]);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill);
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    background-color: #292828;
+  }
+
+  .cover{
+    width: 130px;
+  }
+  
+  .source{
+    position: absolute;
+    width: 20px;
+    left: -6px;
+    top: -67px;
+  }
+
+  .artistInfo{
+    width: 130px;
+    padding-top: .5em;
+    font-size: 15px;
+    color: white;
+  }
+
+  .icon{
+    position: absolute;
+    left: 84%;
+    top: 140px;
+  }
+  
+  .albumInfo{
+    width: 130px;
+    font-size: 13px;
+    color: lightgrey;
+  }
+  
+  .wrapper {
+    position: absolute;
+    clear: both; 
+    overflow: hidden;
+    top: 10%;
+    width: 100px;
+    height: 150px;
+    border-radius: 20px;
+  }
+  
+  .slide-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    border-radius: 20px;
+    -webkit-animation: slidel 1s forwards;
+    animation: slidel 0.5s forwards;
+    z-index: 999;
+  }
+  
+  .slide-right {
+    position: relative;
+    top: 0;
+    padding-top: 3px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background-color: transparent;
+    -webkit-animation: slider 1s forwards;
+    animation: slider 0.5s forwards;
+    z-index: 999;
+  }
+  
+  #search{
+    overflow: hidden;
+    color: white;
+    width: 48px;
+    background-color: transparent;
+    border-style: none;
+    border-width: 3px;
+    border-color: orange;
+    border-radius: 5px;
+    padding: 0.3em;
+  }
+
+  @-webkit-keyframes slidel {
+    100% { left: -100%; }
+  }
+  
+  @keyframes slidel {
+    100% { left: -100%; }
+  }
+  
+  @-webkit-keyframes slider {
+    100% { left: 0;
+          background-color: rgb(145, 95, 3); }
+  }
+  
+  @keyframes slider {
+    100% { left: 0;
+          background-color: rgb(145, 95, 3); }
+  }
+
+}
+
+@media screen and (max-width: 330px) {
+  .container{
+    overflow: hidden;
+    display: grid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0%;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto-fill);
     grid-row-gap: 5em;
     grid-column-gap: 5em;
@@ -257,6 +409,12 @@
     padding-top: .5em;
     font-size: 15px;
     color: white;
+  }
+
+  .icon{
+    position: absolute;
+    left: 84%;
+    top: 140px;
   }
   
   .albumInfo{
@@ -328,3 +486,114 @@
   }
 
 }
+
+@media screen and (max-width: 180px) {
+  .container{
+    overflow: hidden;
+    display: grid;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0%;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fill);
+    grid-row-gap: 5em;
+    grid-column-gap: 5em;
+    background-color: #292828;
+  }
+
+  .cover{
+    width: 95px;
+  }
+  
+  .source{
+    position: absolute;
+    width: 20px;
+    left: -6px;
+    top: -67px;
+  }
+
+  .artistInfo{
+    width: 95px;
+    padding-top: .5em;
+    font-size: 15px;
+    color: white;
+  }
+
+  .icon{
+    position: absolute;
+    left: 84%;
+    top: 140px;
+  }
+  
+  .albumInfo{
+    width: 95px;
+    font-size: 13px;
+    color: lightgrey;
+  }
+  
+  .wrapper {
+    position: absolute;
+    clear: both; 
+    overflow: hidden;
+    top: 10%;
+    width: 100px;
+    height: 150px;
+    border-radius: 20px;
+  }
+  
+  .slide-left {
+    position: absolute;
+    left: -10;
+    width: 50%;
+    border-radius: 20px;
+    -webkit-animation: slidel 1s forwards;
+    animation: slidel 0.5s forwards;
+    z-index: 999;
+  }
+  
+  .slide-right {
+    position: relative;
+    top: 0;
+    padding-top: 3px;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    background-color: transparent;
+    -webkit-animation: slider 1s forwards;
+    animation: slider 0.5s forwards;
+    z-index: 999;
+  }
+  
+  #search{
+    color: white;
+    width: 48px;
+    background-color: transparent;
+    border-style: none;
+    border-width: 3px;
+    border-color: orange;
+    border-radius: 5px;
+    padding: 0.3em;
+  }
+
+  @-webkit-keyframes slidel {
+    100% { left: -100%; }
+  }
+  
+  @keyframes slidel {
+    100% { left: -100%; }
+  }
+  
+  @-webkit-keyframes slider {
+    100% { left: 0;
+          background-color: rgb(145, 95, 3); }
+  }
+  
+  @keyframes slider {
+    100% { left: 0;
+          background-color: rgb(145, 95, 3); }
+  }
+
+}
+
+
