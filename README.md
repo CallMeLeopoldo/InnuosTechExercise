@@ -1,6 +1,6 @@
 # Instructions
 
-# 1. Dependicies
+# 1. Dependencies
 
 This project uses the following dependencies: 
 
@@ -9,7 +9,17 @@ This project uses the following dependencies:
 ## `@reduxjs/toolkit 1.7.1`
 ## `react-router-dom 6.2.1`
 
-All of the dependencies can be installed using:
+All of the dependencies can be installed by:
+
+First accessing the client folder:
+
+## `cd client`
+
+and execute the command:
+
+## `npm install`
+
+To install one of the dependencies, execute the command:
 
 ## `npm install --save <dependency-name>`
 
