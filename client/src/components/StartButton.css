@@ -1,0 +1,27 @@
+.startPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #292828;
+    justify-content: center;
+}
+
+.getAlbum{
+    position: absolute;
+    padding: 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border-style: solid;
+    border-color: orange;
+    border-width: 3px;
+    border-radius: 5px;
+    color: white;
+    font-family: "Oxygen";
+}
+
+.getAlbum:hover {
+    transition: all 0.3s ease-out;
+    background-color: orange;
+    color: white;
+  }

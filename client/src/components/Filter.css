@@ -1,0 +1,56 @@
+.filter-container{
+  display: flex;
+  width:auto;
+  height:auto;
+  background-color: #292828;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color:white;
+  font-family: "Oxygen";
+  font-size: 15px;
+}
+
+.deactive-container{
+    display: flex;
+    width:auto;
+    height:auto;
+    background-color: #292828;
+    color:white;
+    font-family: "Oxygen";
+    font-size: 15px;
+    -webkit-animation: deactiveC 1s forwards;
+    animation: deactiveC 0.5s forwards;
+  }
+
+.active-container{
+    display: flex;
+    background-color: #292828;
+    color:white;
+    font-family: "Oxygen";
+    font-size: 15px;
+    border-radius: 20px;
+    -webkit-animation: activeC 1s forwards;
+    animation: activeC 0.5s forwards;
+  }
+
+  @-webkit-keyframes activeC {
+    100% { background-color: rgb(145, 95, 3); }
+  }
+  
+  @keyframes activeC {
+    100% { background-color: rgb(145, 95, 3); }
+  }
+
+  @-webkit-keyframes deactiveC {
+    100% { background-color: #292828 }
+  }
+  
+  @keyframes deactiveC {
+    100% { background-color: #292828 }
+  }
+
+.filters{
+    font-size: 20px;
+    padding-left: 0.5em;
+}
